@@ -1,3 +1,7 @@
+
+**Note!** As of now the author ran out of time. If anyone wants to help out "fixing" a small part of my private code, so it can be ported to Escaya. This parser can be completed. Just ping me in the 'TODO's issue on this repo if interested.
+
+
 <h1 align="center">Escaya</h1>
 
 <p align="center"> An blazing  fast 100% spec compliant, incremental javascript parser written in Typescript</p>

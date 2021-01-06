@@ -60,7 +60,7 @@ async function bundleES6() {
 
     const suffix = type === 'minified' ? '.min' : '';
 
-    let minfile = join(project.dist.path, `escaya.esm${suffix}.js`);
+    let minfile = join(project.dist.path, `escaya${suffix}.mjs`);
 
     console.log(`writing ${minfile}`);
 

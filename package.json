@@ -3,8 +3,8 @@
   "version": "0.0.61",
   "description": "A blazing fast 100% spec compliant, self-hosted incremental javascript parser written in Typescript",
   "main": "dist/escaya.umd.min.js",
-  "module": "dist/escaya.esm.min.js",
-  "jsnext:main": "dist/escaya.esm.min.js",
+  "module": "dist/escaya.min.mjs",
+  "jsnext:main": "dist/escaya.min.mjs",
   "browser": "dist/escaya.umd.min.js",
   "types": "dist/escaya.d.ts",
   "typings": "dist/escaya.d.ts",
@@ -23,6 +23,7 @@
   ],
   "files": [
     "dist/*.min.js",
+    "dist/*.min.mjs",
     "dist/**/*.d.ts",
     "README.md",
     "LICENSE.md"
@@ -46,7 +47,10 @@
     "test:watch:verbose": "npm run test:watch -- -R spec",
     "prepare-nightly": "node scripts/bump-dev-version",
     "coverage": "cross-env TS_NODE_PROJECT=\"test/tsconfig.json\" nyc -n \"src/**/*.ts\" -e .ts -i ts-node/register -r text-summary -r lcov -r html npm test",
-    "post_coverage": "cross-env cat ./coverage/lcov.info | coveralls"
+    "post_coverage": "cross-env cat ./coverage/lcov.info | coveralls",
+    "snapshot": "node tests/run_tests.mjs",
+    "snapshot:update": "node tests/run_tests.mjs -u",
+    "snapshot:autogen": "node tests/run_tests.mjs -g"
   },
   "devDependencies": {
     "@types/mocha": "^8.0.3",

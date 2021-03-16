@@ -14,7 +14,7 @@ export interface Node {
  */
 export interface NodeMeta {
   asi?: boolean;
-  newlineBeforNextToken?: boolean;
+  newlineBeforeNextToken?: boolean;
 }
 
 export const enum NodeFlags {

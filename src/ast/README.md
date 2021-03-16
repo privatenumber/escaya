@@ -94,7 +94,7 @@ The `line` field is `1-indexed` and the `column` field is `0-indexed`
 ```js
 export interface NodeMeta {
   asi?: boolean,
-  newlineBeforNextToken?: boolean;
+  newlineBeforeNextToken?: boolean;
 }
 ```
 Every single valid CST Node type.
